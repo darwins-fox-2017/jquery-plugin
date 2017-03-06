@@ -21,7 +21,8 @@
     <script>
       var email = $("input[name='invalid-email']")
       email.keyup(function() {
-        if (!email.emailValidator()) {
+        console.log(email.val());
+        if (!email.emailValidator(email.val())) {
           $(email).addClass("error").removeClass("success")
           $(email).next().fadeIn()
         } else {
