@@ -22,11 +22,11 @@
       var email = $("input[name='invalid-email']")
       email.keyup(function() {
         if (!email.emailValidator()) {
-          $(email).addClass("error").removeClass("success")
-          $(email).next().fadeIn()
+          email.addClass("error").removeClass("success")
+          email.next().fadeIn()
         } else {
-          $(email).addClass("success").removeClass("error")
-          $(email).next().fadeOut()
+          email.addClass("success").removeClass("error")
+          email.next().fadeOut()
         }
       })
     </script>
