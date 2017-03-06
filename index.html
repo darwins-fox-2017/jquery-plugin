@@ -10,7 +10,7 @@
   <body>
 
     <form action="" autocomplete="off">
-      <input type="text" name="invalid-email" placeholder="Your email address" value="admin@example" class="error">
+      <input id="email" type="text" name="invalid-email" placeholder="Your email address" value="admin@example" class="error">
       <span class="error">Email address is not valid.</span>
     </form>
 
@@ -19,14 +19,14 @@
 
     <!-- demos -->
     <script>
-      var email = $("input[name='invalid-email']")
-      email.keyup(function() {
-        if (!email.emailValidator()) {
-          $(email).addClass("error").removeClass("success")
-          $(email).next().fadeIn()
+      var validate = $("#email")
+      validate.keyup(function() {
+        if (!validate.emailValidator()) {
+          $(validate).addClass("error").removeClass("success")
+          $(validate).next().fadeIn()
         } else {
-          $(email).addClass("success").removeClass("error")
-          $(email).next().fadeOut()
+          $(validate).addClass("success").removeClass("error")
+          $(validate).next().fadeOut()
         }
       })
     </script>
